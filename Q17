@@ -1,0 +1,21 @@
+class Armstrong {
+    static void checkArmstrong(int num) {
+        int temp = num, sum = 0, rem;
+
+        while (num > 0) {
+            rem = num % 10;
+            sum = sum + (rem * rem * rem);
+            num = num / 10;
+        }
+
+        if (sum == temp)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("Not Armstrong number");
+    }
+
+    public static void main(String args[]) {
+        checkArmstrong(153);
+        checkArmstrong(22);
+    }
+}
