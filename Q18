@@ -1,0 +1,22 @@
+class Student {
+    int enrollmentNo;
+    String name;
+    String gender;
+
+    Student(int e, String n, String g) {
+        enrollmentNo = e;
+        name = n;
+        gender = g;
+    }
+
+    void display() {
+        System.out.println("Enrollment No: " + enrollmentNo);
+        System.out.println("Name: " + name);
+        System.out.println("Gender: " + gender);
+    }
+
+    public static void main(String args[]) {
+        Student s1 = new Student(101, "Aaryan", "Male");
+        s1.display();
+    }
+}
