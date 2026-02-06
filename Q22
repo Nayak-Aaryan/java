@@ -1,0 +1,27 @@
+class Shape {
+    double area;
+
+    // Circle
+    Shape(double radius) {
+        area = 3.14 * radius * radius;
+        System.out.println("Area of Circle = " + area);
+    }
+
+    // Rectangle
+    Shape(double length, double width) {
+        area = length * width;
+        System.out.println("Area of Rectangle = " + area);
+    }
+
+    // Triangle
+    Shape(double base, double height, int dummy) {
+        area = 0.5 * base * height;
+        System.out.println("Area of Triangle = " + area);
+    }
+
+    public static void main(String args[]) {
+        Shape c = new Shape(5);
+        Shape r = new Shape(4, 6);
+        Shape t = new Shape(3, 8, 1);
+    }
+}
