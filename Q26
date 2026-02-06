@@ -1,0 +1,28 @@
+class Bank {
+    double balance = 0;
+
+    void deposit(int amount) {
+        balance = balance + amount;
+        System.out.println("Cash Deposit: " + amount);
+    }
+
+    void deposit(int amount, String chequeNo) {
+        balance = balance + amount;
+        System.out.println("Cheque Deposit: " + amount + " Cheque No: " + chequeNo);
+    }
+
+    void deposit(double amount, String transactionId) {
+        balance = balance + amount;
+        System.out.println("Online Transfer: " + amount + " Transaction ID: " + transactionId);
+    }
+
+    public static void main(String args[]) {
+        Bank b = new Bank();
+
+        b.deposit(2000);
+        b.deposit(3000, "CH123");
+        b.deposit(5000.50, "TXN789");
+
+        System.out.println("Total Balance = " + b.balance);
+    }
+}
