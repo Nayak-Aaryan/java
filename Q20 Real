@@ -9,6 +9,7 @@ class BankAccount {
         balance = bal;
     }
 
+
     void deposit(double amt) {
         balance = balance + amt;
         System.out.println("Deposited: " + amt);
