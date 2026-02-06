@@ -1,0 +1,36 @@
+class Employee {
+    String empName;
+    int age;
+    double salary;
+
+    Employee(String n, int a, double s) {
+        empName = n;
+        age = a;
+        salary = s;
+    }
+
+    void displayInfo() {
+        System.out.println("Name: " + empName);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+
+    void calculateTax() {
+        double tax;
+
+        if (salary <= 20000)
+            tax = salary * 0.001;   // 0.1%
+        else if (salary <= 50000)
+            tax = salary * 0.002;   // 0.2%
+        else
+            tax = salary * 0.003;   // 0.3%
+
+        System.out.println("Tax = " + tax);
+    }
+
+    public static void main(String args[]) {
+        Employee e1 = new Employee("Aaryan", 20, 45000);
+        e1.displayInfo();
+        e1.calculateTax();
+    }
+}
