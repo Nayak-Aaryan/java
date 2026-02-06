@@ -1,0 +1,39 @@
+class Employee {
+    int id;
+    String name;
+    double salary;
+    String department;
+
+    // Parameterized Constructor
+    Employee(int i, String n, double s, String d) {
+        id = i;
+        name = n;
+        salary = s;
+        department = d;
+    }
+
+    // Copy Constructor
+    Employee(Employee e) {
+        id = e.id;
+        name = e.name;
+        salary = e.salary;
+        department = e.department;
+    }
+
+    void display() {
+        System.out.println(id + " " + name + " " + salary + " " + department);
+    }
+
+    public static void main(String args[]) {
+        Employee e1 = new Employee(101, "Aaryan", 50000, "IT");
+
+        Employee e2 = new Employee(e1);   // copy constructor
+        e2.department = "HR";             // change copied object
+
+        System.out.println("Original Employee:");
+        e1.display();
+
+        System.out.println("Copied Employee:");
+        e2.display();
+    }
+}
